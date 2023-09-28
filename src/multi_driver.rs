@@ -8,7 +8,7 @@ pub struct MultiDriver {
     #[cfg(feature = "std")]
     drivers: Vec<Driver>,
     #[cfg(not(feature = "std"))]
-    drivers: ArrayVec<[Driver; MultiDriver::MAX_DRIVERS]>,
+    drivers: ArrayVec<Driver, { MultiDriver::MAX_DRIVERS }>,
 }
 
 impl MultiDriver {

@@ -1,5 +1,4 @@
 use core::time::Duration;
-use void::Void;
 
 /// An interface to the stepper motor.
 pub trait Device {
@@ -9,6 +8,10 @@ pub trait Device {
     type Error;
 
     fn step(&mut self, ctx: &StepContext) -> Result<(), Self::Error>;
+
+    fn stop(&mut self, _ctx: &StepContext)-> Result<(), Self::Error> {
+        Ok(())
+    }
 }
 
 impl<'a, D: Device> Device for &'a mut D {
@@ -38,7 +41,7 @@ pub struct StepContext {
 pub fn func_device<F, B, T>(
     forward: F,
     backward: B,
-) -> impl Device<Error = Void>
+) -> impl Device<Error = !>
 where
     F: FnMut() -> T,
     B: FnMut() -> T,
@@ -61,7 +64,7 @@ where
     F: FnMut() -> T,
     B: FnMut() -> T,
 {
-    type Error = Void;
+    type Error = !;
 
     #[inline]
     fn step(&mut self, ctx: &StepContext) -> Result<(), Self::Error> {

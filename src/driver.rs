@@ -59,7 +59,7 @@ impl Driver {
     /// Move forward by the specified number of steps.
     #[inline]
     pub fn move_by(&mut self, delta: i64) {
-        self.move_to(self.current_position() + delta);
+        self.move_to(self.target_position() + delta);
     }
 
     /// Set the maximum permitted speed in `steps/second`.

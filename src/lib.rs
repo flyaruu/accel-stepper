@@ -71,6 +71,7 @@
 //! [original]: http://www.airspayce.com/mikem/arduino/AccelStepper/index.html
 //! [hal]: https://crates.io/crates/embedded-hal
 
+#![feature(never_type)]
 #![cfg_attr(not(feature = "std"), no_std)]
 
 #[cfg(all(not(feature = "std"), test))]

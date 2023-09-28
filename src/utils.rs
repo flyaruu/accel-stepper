@@ -1,4 +1,5 @@
 use core::time::Duration;
+use libm::F32Ext;
 
 pub(crate) trait Clamp {
     fn clamp(self, lower: Self, upper: Self) -> Self;
