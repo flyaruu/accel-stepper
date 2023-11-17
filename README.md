@@ -1,5 +1,13 @@
 # Accel Stepper
 
+## Forked!
+Forked from Michael Bryan, needed some changes.
+Asked if he was interested for pull requests, didn't get any reply, and given that the last commit was over 4 years ago, I take that as a 'no'.
+
+Original: https://gitlab.com/Michael-F-Bryan/accel-stepper
+
+
+
 [![pipeline status](https://gitlab.com/Michael-F-Bryan/accel-stepper/badges/master/pipeline.svg)](https://gitlab.com/Michael-F-Bryan/accel-stepper/commits/master)
 
 (**[API Documentation](https://michael-f-bryan.gitlab.io/accel-stepper)**)
