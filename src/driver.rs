@@ -327,6 +327,8 @@ impl Driver {
             let ctx = StepContext {
                 position: new_position,
                 step_time: now,
+                target_position: self.target_position,
+                
             };
             device.step(&ctx)?;
 

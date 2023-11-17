@@ -31,6 +31,8 @@ pub struct StepContext {
     /// The time (as dictated by [`crate::SystemClock::elapsed()`]) this step
     /// was taken.
     pub step_time: Duration,
+
+    pub target_position: i64,
 }
 
 /// A [`Device`] which will call one function for a forward step, and another
